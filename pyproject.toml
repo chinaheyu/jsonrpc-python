@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jsonrpc-python"
+description = "jsonrpc-python"
+authors = [
+  { name="Yu He", email="chinaheyu@outlook.com" }
+]
+maintainers = [
+  { name="Yu He", email="chinaheyu@outlook.com" }
+]
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+keywords = ["jsonrpc"]
+dynamic = ["version", "dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/chinaheyu/jsonrpc-python"
+Repository = "https://github.com/chinaheyu/jsonrpc-python.git"
+Issues = "https://github.com/chinaheyu/jsonrpc-python/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["jsonrpc"]
+namespaces = false
+
+[tool.setuptools.dynamic]
+version = {attr = "jsonrpc.__version__"}
+dependencies = {file = ["requirements.txt"]}
